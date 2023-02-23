@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Nunito:wght@300;400;500;600;700&display=swap');
 
 
-::root{
+:root{
 --color-500: hsl(0, 0%, 20%);
 --color-400: hsl(231, 3%, 48%);
 --color-300: hsl(0, 0%, 48%);
@@ -16,4 +16,62 @@
 --fw-500:500;
 --fw-600:600;
 --fw-700:700;
+}
+
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--color-100);
+}
+
+.nav{
+    /* border:1px solid red; */
+    width: 75rem;
+    margin-inline: auto;
+    padding: 1.5rem .8rem;
+}
+
+.navbar__wrapper{
+    font-family: var(--ff-001);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* border:1px solid red; */
+}
+
+.navbar__logo .logo{
+    color: var(--color-500);
+    font-weight: var(--fw-700);
+    font-size: 1.8rem;
+}
+
+.navbar__list{
+    /* border: 1px solid red; */
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.navbar__list .navbar__link{
+    text-decoration: none;
+    color: var(--color-400);
+    font-size: .8rem;
+    font-weight: var(--fw-700);
+    transition: color .3s ease, transform 200ms ease-out;
+}
+
+.navbar__list .navbar__link:hover{
+    color: var(--color-500);
+    transform: scale(1.2);
+}
+
+svg{
+    fill: var(--color-400);
 }
