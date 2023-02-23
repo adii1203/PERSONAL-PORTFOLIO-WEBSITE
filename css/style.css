@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Nunito:wght@300;400;500;600;700&display=swap');
+
+
+::root{
+--color-500: hsl(0, 0%, 20%);
+--color-400: hsl(231, 3%, 48%);
+--color-300: hsl(0, 0%, 48%);
+--color-200: hsl(255, 4%, 81%);
+--color-100: hsl(0, 25%, 98%);
+
+--ff-001:'Comfortaa', sans-serif;
+--ff-002:'Nunito', sans-serif;
+
+--fw-300:300;
+--fw-400:400;
+--fw-500:500;
+--fw-600:600;
+--fw-700:700;
+}
