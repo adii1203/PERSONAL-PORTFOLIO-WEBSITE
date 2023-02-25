@@ -255,19 +255,19 @@ svg{
     margin-top: 4em;
 }
 
-.skills__tech{
+.skills__row{
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
 
-.skills__tech h3{
+.skills__row h3{
     font-size: 1.6rem;
     color: var(--color-500);
     position: relative;
 }
 
-.skills__tech h3::after{
+.skills__row h3::after{
     content: '';
     position: absolute;
     width: calc(1rem + 100%);
@@ -278,14 +278,14 @@ svg{
     background: var(--color-400);
 }
 
-.tech__icon{
+.skill__icon{
     display: grid;
     grid-template-columns: repeat(3 ,80px);
     gap: 1.4rem;
     padding: 1rem;
 }
 
-.tech__icon div{
+.skill__icon div{
     height: 80px;
     width: 80px;
     text-align: center;
@@ -293,12 +293,12 @@ svg{
     box-shadow: 0px 0px 68px -20px var(--color-500);
 }
 
-.tech__icon div svg{
+.skill__icon div svg{
     transform: translateY(80%);
     transition: transform 0.3s ease;
 }
 
-.tech__icon div .tech{
+.skill__icon div .tech{
     color: var(--color-500);
     font-size: 14px;
     font-weight: var(--fw-600);
@@ -307,7 +307,7 @@ svg{
     opacity: 0;
 }
 
-.tech__icon div .level{
+.skill__icon div .level{
     color: var(--color-400);
     font-size: 12px;
     font-weight: var(--fw-700);
@@ -316,35 +316,62 @@ svg{
     opacity: 0;
 }
 
-.tech__icon div:hover .tech{
+.skill__icon div:hover .tech{
     transform: translateY(0);
     opacity: 1;
 }
 
-.tech__icon div:hover .level{
+.skill__icon div:hover .level{
     transform: translateY(0);
     opacity: 1;
 }
 
-.tech__icon div:hover svg{
+.skill__icon div:hover svg{
     transform: translateY(10%);
 }
-.tech__icon div:hover:nth-child(1) svg{
+.skill__icon div:hover:nth-child(1) svg{
     fill: #E65100;
 }
-.tech__icon div:hover:nth-child(2) svg{
+.skill__icon div:hover:nth-child(2) svg{
     fill: #2AA4F4;
 }
-.tech__icon div:hover:nth-child(3) svg{
+.skill__icon div:hover:nth-child(3) svg{
     fill: #FFD600;
 }
-.tech__icon div:hover:nth-child(4) svg{
+.skill__icon div:hover:nth-child(4) svg{
     fill: #80DEEA;
 }
-.tech__icon div:hover:nth-child(5) svg{
+.skill__icon div:hover:nth-child(5) svg{
     fill: #00ACC1;
 }
-.tech__icon div:hover:nth-child(6) svg{
+.skill__icon div:hover:nth-child(6) svg{
     fill: #21a366;
 }
 
+._tool{
+    flex-direction: row-reverse;
+    margin-top: 4rem;
+}
+
+._tool h3::after{
+    left: -16px;
+}
+
+.tool div:hover:nth-child(1) svg{
+    fill:  #0069B0;
+}
+.tool div:hover:nth-child(2) svg{
+    fill: #F4511E;
+}
+.tool div:hover:nth-child(3) svg{
+    fill: #000;
+}
+.tool div:hover:nth-child(4) svg{
+    fill: #000;
+}
+.tool div:hover:nth-child(5) svg{
+    fill: #D50000;
+}
+.tool div:hover:nth-child(6) svg{
+    fill: #000;
+}
