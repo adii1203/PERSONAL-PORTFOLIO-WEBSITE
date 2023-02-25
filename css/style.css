@@ -237,7 +237,8 @@ svg{
 
 /* skills section starts */
 
-.skills{
+.skills,
+.projects{
     width: min(75rem,100%);
     margin-inline: auto;
     margin-top: 6em;
@@ -245,16 +246,19 @@ svg{
     padding: 1.5rem 0.8rem;
 }
 
-.skills .skills__header{
+.skills .skills__header,
+.project__header{
     text-align: center;
 }
 
-.skills .skills__header h2{
+.skills .skills__header h2,
+.project__header h2{
     font-size: 2.8rem;
     color: var(--color-500);
 }
 
-.skills .skills__header p{
+.skills .skills__header p,
+.project__header p{
     font-size: .8rem;
     color: var(--color-400);
     font-weight: var(--fw-600);
@@ -384,6 +388,53 @@ svg{
 .tool div:hover:nth-child(6) svg{
     fill: #000;
 }
+/*  */
+.project__wrapper{
+    margin-top: 4em;
+}
+
+.project__title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.project__title p{
+    font-weight: var(--fw-700);
+    color: var(--color-500);
+    position: relative;
+}
+.project__title  svg{
+    transform: rotate(270deg);
+}
+
+.project__link a{
+    padding: 2px 12px;
+    border: 2px solid #0069B0;
+    border-radius: 4px;
+    color: var(--color-500);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: var(--fw-700);
+}
+
+.project__subtitle{
+    width: 400px;
+    transform: translateX(140px);
+    margin-left:auto ;
+    margin-right: auto;
+    margin-top: .8rem;
+}
+.project__subtitle p{
+    font-size: 14px;
+    color: var(--color-400);
+    font-weight: var(--fw-700);
+}
+#tech-stack{
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
 
 /* mwdia querees */
 
@@ -456,5 +507,26 @@ svg{
     }
     ._tool h3::after{
         left: 0;
+    }
+    .project__title{
+        flex-direction: column;
+        gap: .8rem;
+    }
+    .project__title  svg{
+        display: none;
+    }
+    .project__link{
+        transform: translateX(0px);
+        opacity: 1;
+        transition: all 0.3s ease-in;
+    }
+    .project__subtitle{
+        width: 350px;
+        transform: translateX(0px);
+        margin-top: 1.8rem;
+        text-align: center;
+    }
+    #tech-stack{
+        padding: 0 1rem;
     }
 }
