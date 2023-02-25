@@ -33,15 +33,14 @@ body{
 }
 
 .nav{
-    /* border:1px solid red; */
-    width: 75rem;
+    width: min(75rem,100%);
     margin-inline: auto;
     padding: 1.5rem .8rem;
     position: sticky;
     top: 0;
     z-index: 99;
     background: var(--color-100);
-    /* overflow: hidden; */
+
 }
 
 .navbar__wrapper{
@@ -49,7 +48,6 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* border:1px solid red; */
 }
 
 .navbar__logo .logo{
@@ -78,10 +76,14 @@ body{
     transform: scale(1.2);
 }
 
+.menu{
+    display: none;
+}
+
 /* hero section start here */
 
-.hero{
-    width: 75rem;
+ .hero{
+    width: min(75rem, 100%);
     margin-inline: auto;
     margin-top: 4em;
     font-family: var(--ff-002);
@@ -92,9 +94,15 @@ body{
     padding: 1.5rem 0.8rem;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: center; 
 }
 
+.left__box{
+    display: flex;
+    gap: 6rem;
+    align-items: center;
+    justify-content: space-between;
+}
 .social__link{
     display: flex;
     flex-direction: column;
@@ -123,7 +131,7 @@ svg{
 
 .text__contant{
     margin-left: 80px;
-    /* margin-bottom: 4.9rem; */
+    margin-bottom: 4.9rem; 
     width: 350px;
 }
 
@@ -139,6 +147,7 @@ svg{
     color: var(--color-400);
     font-weight: var(--fw-600);
     margin-top: 1.2rem;
+    width: max-content;
 }
 
 .status::before{
@@ -224,12 +233,12 @@ svg{
 }
 .img__contant img{
     width: 25rem;
-}
+} 
 
 /* skills section starts */
 
 .skills{
-    width: 75rem;
+    width: min(75rem,100%);
     margin-inline: auto;
     margin-top: 6em;
     font-family: var(--ff-002);
@@ -374,4 +383,78 @@ svg{
 }
 .tool div:hover:nth-child(6) svg{
     fill: #000;
+}
+
+/* mwdia querees */
+
+@media (max-width:430px){
+    .nav{
+        width: min(75rem, 100%);
+        padding: 1rem .8rem;
+        font-family: var(--ff-001);
+        position: relative;
+    }
+    .navbar__list{
+        position: absolute;
+        inset: 80px 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        height: 50vh;
+        width: 80%;
+        gap: 1.8rem;
+        box-shadow: 0px 0px 68px -40px var(--color-500);
+        transform: translateY(-540px);
+        opacity: 0;
+        transition: all 0.3s ease;
+        background-color: #fff;
+    }
+    .show{
+        opacity: 1;
+        transform: translateY(0);
+    }
+    .menu{
+        display: block;
+    }
+
+    .hero{
+        margin-top: 0;
+    }
+    .hero__wrapper{
+        flex-direction: column;
+    }
+    .text__contant{
+        margin-left: 0px;
+        margin-bottom: 0;
+        width: auto; 
+    }
+    .left__box{
+        gap: 2rem;
+        margin-top: 2rem;
+    }
+    .social__link{
+        align-items: left;
+    }
+    .text__contant .title{
+        font-size: 2rem;
+    }
+    .img__contant img{
+        width: 20rem;
+    } 
+    .btn{
+        margin-top:2.8rem ;
+    }
+    .scroll__box{
+        display: none;
+    }
+    .skills__row{
+        flex-direction: column;
+    }
+    .skills__row h3::after{
+        width: 100%;
+    }
+    ._tool h3::after{
+        left: 0;
+    }
 }
